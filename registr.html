@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/site.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
-    <div class="register-form">
-        <div>
+    <div class="register-container">
+        <div class="nav">
             <a href="login.html">Login</a>
-            <span>Registration</span>
+            <div class="navdivider"></div>
+            <span>Register</span>
         </div>
-        <p>Enter your email and password to register.</p>
-        
-        <form>
-            <input type="text" id="username" placeholder="Input your username"/>
-            <input type="email" id="email" placeholder="Input your email"/>
-            <input type="password" id="password" placeholder="Input your password"/>
-            <input type="password" id="repeatpassword" placeholder="Confirm your password"/>
-            <input type="submit" value="Register"/>
-        </form>
 
-        <p>Or register with</p>
-        <button>
-            <img src="img/svg/icon-google.svg" />
-            <span>Google</span>
-        </button>
-        <button>
-            <img src="img/svg/icon-facebook.svg" />
-            <span>Facebook</span>
-        </button>
+        <div class="form-container">
+            <p>Enter your email and password to register.</p>
+            <form>
+                <input type="text" id="username" placeholder="Username">
+                <input type="email" id="email" placeholder="Enter your email address">
+                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="repeatpassword" placeholder="Confirm Password">
+                <input type="submit" value="Register">
+            </form>
+            <p>Or register with</p>
+            <div class="link-buttons">
+                <button>
+                    <img src="img/svg/icon-google.svg" alt="google-icon" >
+                    <span>Continue with Google</span>
+                </button>
+                <button>
+                    <img src="img/svg/icon-facebook.svg" alt="fasebook-icon" >
+                    <span>Continue with Facebook</span>
+                </button>
+            </div>
+        </div>
 
+        <div class="rectangle"></div>
     </div>
 </body>
 </html>

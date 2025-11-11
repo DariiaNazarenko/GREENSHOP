@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Cera Pro';
+    src: local('Cera Pro Regular'), local('Cera-Pro-Regular'),
+        url('../fonts/CeraPro-Regular.woff2') format('woff2'),
+        url('../fonts/CeraPro-Regular.woff') format('woff'),
+        url('../fonts/CeraPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: green;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cera Pro;
+}
+
+.register-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 500px;
+    height: 656px;
+    padding: 52px 100px;
+    border: 1px solid;
+    border-radius: 6px;
+}
+
+    .register-container .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+
+        .register-container .nav .navdivider {
+            height: 14px;
+            border-right: solid 1px #000000;
+            margin: 0 16px;
+        }
+
+    .register-container .form-container {
+        padding: 16px 0;
+        margin: 16px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+        
+
+        .register-container .form-container p {
+            margin: 0;
+        }
+        
+
+        .register-container .form-container form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 32px;
+        }
+
+
+            .register-container .form-container form input {
+                height: 40px;
+                width: 300px;
+                border-radius: 6px;
+                border: solid 1px #e3e3e3;
+                margin-top: 16px;
+                padding: 0 16px;
+            }
+
+            .register-container .form-container form input[type^="submit"] {
+                height: 40px;
+                border-radius: 6px;
+                background-color: #46A358;
+                color: white;
+                margin-top: 41px;
+            }
+
+        .register-container .form-container .link-buttons {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+            .register-container .form-container .link-buttons button {
+                margin-bottom: 16px;
+                width: 300px;
+                height: 40px;
+                border-radius: 6px;
+                border: solid 1px #e3e3e3;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        
+                .register-container .form-container .link-buttons button span {
+                    margin-left: 8px
+                }
+
+.rectangle {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 0;
+    margin-left: -100px;
+    background-color: #46A358;
+}
