@@ -8,25 +8,53 @@
     font-style: normal;
   }
 
-*{
+* {
     box-sizing: border-box;
-}
-a {
-    text-decoration: none;
-    color: green;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
     font-family: Cera Pro;
 }
 
+header,
+main {
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #46A358;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    width: max-content;
+    font-size: 14px;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #3b8e4d;
+}
+.button > * {
+    vertical-align: middle;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 64px;
+    margin:0
+}
+
+/* Login/register styles */
+
 .register-container {
+    margin: 0 auto;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -36,6 +64,11 @@ body {
     border: 1px solid;
     border-radius: 6px;
 }
+    
+    .register-container a {
+        text-decoration: none;
+        color: green;
+    }
 
     .register-container .nav {
         display: flex;
@@ -111,11 +144,138 @@ body {
                     margin-left: 8px
                 }
 
-.rectangle {
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    bottom: 0;
-    margin-left: -100px;
-    background-color: #46A358;
+    .register-container .rectangle {
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        bottom: 0;
+        margin-left: -100px;
+        background-color: #46A358;
+    }
+
+/* Header styles */
+
+header {
+    display: block;
+    height: 53px;
+    margin-top: 30px;
+    border-bottom: solid 1px #46A35880;
 }
+    header > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    header .logo {
+        width: 150px;
+    }
+
+    header nav {
+        width: calc(100% - 150px - 100px - 9px);
+        height: 100%;
+    }
+
+        header nav ul {
+            display: block;
+            margin: 0 auto;
+            width: max-content;
+            height: 45px;
+            margin-top: 7px;
+        }
+
+            header nav ul li {
+                display: inline-block;
+                margin-right: 50px;
+                height: 100%;
+                cursor: pointer;
+            }
+
+                header nav ul li:hover,
+                header nav ul li.active {
+                    border-bottom: solid 3px #46A358;
+                    font-weight: 600;
+                }
+                
+
+                header nav ul li a {
+                    display: block;
+                    height: 100%;
+                    text-decoration: none;
+                    color: black;
+                }
+        
+        header > .login-link > * {
+            vertical-align: middle;
+        }
+
+/* Main styles */
+
+    main > section {
+        display: block;
+    }
+    main .hero {
+        background-color: #F5F5F580;
+        margin-top: 12px;
+    }
+
+        main .hero > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        main .hero .hero-text {
+            width: calc(100% - 507px - 5px);
+            padding: 40px;
+        }
+            
+            main .hero .hero-text p {
+                font-size: 14px;
+            }
+
+            main .hero .hero-text .welcome {
+                letter-spacing: 2px;
+            }
+
+            main .hero .hero-text .title {
+                max-width: 530px;
+                margin: 8px 0;
+            }
+
+                main .hero .hero-text .title span {
+                    color: #46A358;
+                }
+
+
+            main .hero .hero-text .paragraph {
+                color: #00000080;
+                max-width: 557px;
+                line-height: 2;
+            }
+
+            main .hero .hero-text .button {
+                display: block;
+                padding: 11px 26px;
+                font-weight: 600;
+                margin-top: 44px;
+                letter-spacing: 2px;
+            }
+
+                main .hero .hero-text .button span {
+                    display: block;
+                }
+
+        main .hero .hero-image-container {
+            position: relative;
+            width: 507px;
+            height: 450px;
+        }
+        
+            main .hero .hero-image-container .small {
+                width: 135px;
+                height: 135px;
+                position: absolute;
+                z-index: 100;
+                left: 0;
+                top: 298px;
+                left: 55px; 
+            }
