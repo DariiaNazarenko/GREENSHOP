@@ -40,11 +40,10 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display: inline-block;
     font-family: "Cera Pro";
     color: #3D3D3D;
+    line-height: 1;
+    font-size: 16px;
 }
 
 header,
@@ -61,7 +60,6 @@ main {
     border-radius: 6px;
     text-decoration: none;
     width: max-content;
-    font-size: 16px;
 }
 
 .button:hover {
@@ -77,6 +75,11 @@ h1 {
     font-weight: 900;
     font-size: 70px;
     margin:0
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 18px;
 }
 
 /* Login/register styles */
@@ -215,16 +218,18 @@ header {
                 display: inline-block;
                 margin-right: 50px;
                 height: 100%;
-                font-size: 16px;
-                cursor: pointer;
             }
 
-                header nav ul li:hover,
-                header nav ul li.active {
+                
+                header nav ul li a.active {
+                    pointer-events: none;
+                }
+
+                header nav ul li a:hover,
+                header nav ul li a.active {
                     border-bottom: solid 3px #46A358;
                     font-weight: 700;
                 }
-                
 
                 header nav ul li a {
                     display: block;
@@ -235,7 +240,6 @@ header {
         
         header > .login-link > * {
             vertical-align: middle;
-            font-size: 16px;
         }
 
 /* Main styles */
@@ -264,7 +268,6 @@ header {
 
             main .hero .hero-text .welcome {
                 letter-spacing: 2px;
-                font-size: 16px;
                 font-weight: 500;
             }
 
@@ -329,11 +332,6 @@ header {
     padding: 14px 18px;
 }
 
-    .categories-nav-block span {
-        font-size: 18px;
-        font-weight: 700;
-    }
-
     .categories-nav-block ul {
         overflow: hidden;
         list-style-type: none;
@@ -346,11 +344,19 @@ header {
         padding: 12px 0;
     }
 
-    .categories-nav-block li:hover,
-    .categories-nav-block li.active {
+    .categories-nav-block a.active {
+        pointer-events: none;
+    }
+
+    .categories-nav-block a:hover,
+    .categories-nav-block a.active {
         color: #46A358;
         font-weight: 700;
-        cursor: pointer;
+    }
+
+    .categories-nav-block a {
+        text-decoration: none;
+        color: black;
     }
 
     .categories-nav-block a {
@@ -369,7 +375,6 @@ header {
 
 .catalog-header {
     overflow: hidden;
-    display: block;
 }
 
     .catalog-header ul {
@@ -383,13 +388,19 @@ header {
         margin-right: 40px;
     }
 
-        .catalog-header li a {
-            display: block;
-            height: 23px;
-        }
+    .catalog-header a {
+        display: block;
+        height: 23px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .catalog-header a.active {
+        pointer-events: none;
+    }
     
-    .catalog-header li.active,
-    .catalog-header li:hover {
+    .catalog-header a.active,
+    .catalog-header a:hover {
         font-weight: 700;
         color: #46A358;
         border-bottom: 2px solid #46A358;
@@ -452,7 +463,6 @@ header {
     .product-card h3 {
         margin-top: 12px;
         font-weight: 400;
-        font-size: 16px;
     }
     
     .product-card span {
@@ -485,14 +495,19 @@ header {
         margin-left: 10px;
         font-weight: 300;
         font-size: 18px;
+        overflow: hidden;
     }
     
-    .paginator li:hover,
-    .paginator li.active {
+    .paginator a:hover,
+    .paginator a.active {
         background-color: #46A358;
         font-weight: 700;
         color: white;
         cursor: pointer;
+    }
+    
+    .paginator a.active {
+        pointer-events: none;
     }
 
     .paginator a {
@@ -501,4 +516,6 @@ header {
         align-items: center;
         height: 100%;
         width: 100%;
+        color: black;
+        text-decoration: none;
     }
