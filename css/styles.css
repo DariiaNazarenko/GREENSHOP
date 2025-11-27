@@ -1,12 +1,37 @@
 @font-face {
     font-family: 'Cera Pro';
-    src: local('Cera Pro Regular'), local('Cera-Pro-Regular'),
-        url('../fonts/CeraPro-Regular.woff2') format('woff2'),
-        url('../fonts/CeraPro-Regular.woff') format('woff'),
-        url('../fonts/CeraPro-Regular.ttf') format('truetype');
-    font-weight: 400;
+    src: url('../fonts/CeraPro-Light.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
-  }
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url('../fonts/CeraPro-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
 
 * {
     box-sizing: border-box;
@@ -15,10 +40,10 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display: inline-block;
-    font-family: Cera Pro;
+    font-family: "Cera Pro";
+    color: #3D3D3D;
+    line-height: 1;
+    font-size: 16px;
 }
 
 header,
@@ -35,20 +60,26 @@ main {
     border-radius: 6px;
     text-decoration: none;
     width: max-content;
-    font-size: 14px;
 }
-.button:hover{
+
+.button:hover {
     cursor: pointer;
     background-color: #3b8e4d;
 }
+
 .button > * {
     vertical-align: middle;
 }
 
 h1 {
-    font-weight: 600;
-    font-size: 64px;
+    font-weight: 900;
+    font-size: 70px;
     margin:0
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 18px;
 }
 
 /* Login/register styles */
@@ -145,7 +176,7 @@ h1 {
                 }
 
     .register-container .rectangle {
-        position: absolute;
+        position: absolute; 
         width: 100%;
         height: 10px;
         bottom: 0;
@@ -187,15 +218,18 @@ header {
                 display: inline-block;
                 margin-right: 50px;
                 height: 100%;
-                cursor: pointer;
             }
 
-                header nav ul li:hover,
-                header nav ul li.active {
-                    border-bottom: solid 3px #46A358;
-                    font-weight: 600;
-                }
                 
+                header nav ul li a.active {
+                    pointer-events: none;
+                }
+
+                header nav ul li a:hover,
+                header nav ul li a.active {
+                    border-bottom: solid 3px #46A358;
+                    font-weight: 700;
+                }
 
                 header nav ul li a {
                     display: block;
@@ -234,6 +268,7 @@ header {
 
             main .hero .hero-text .welcome {
                 letter-spacing: 2px;
+                font-weight: 500;
             }
 
             main .hero .hero-text .title {
@@ -249,15 +284,15 @@ header {
             main .hero .hero-text .paragraph {
                 color: #00000080;
                 max-width: 557px;
-                line-height: 2;
+                line-height: 24px;
             }
 
             main .hero .hero-text .button {
                 display: block;
                 padding: 11px 26px;
-                font-weight: 600;
+                font-weight: 700;
                 margin-top: 44px;
-                letter-spacing: 2px;
+                letter-spacing: 0;
             }
 
                 main .hero .hero-text .button span {
@@ -279,3 +314,208 @@ header {
                 top: 298px;
                 left: 55px; 
             }
+
+/* Catalog styles */
+.catalog-section {
+    margin-top: 46px;
+    overflow: hidden;
+}
+
+.catalog-left-block {
+    float: left;
+    width: 310px;
+}
+
+.categories-nav-block {
+    height: 774px;
+    background-color: #FBFBFB;
+    padding: 14px 18px;
+}
+
+    .categories-nav-block ul {
+        overflow: hidden;
+        list-style-type: none;
+        margin-left: 12px;
+        margin-top: 7px;
+        font-size: 15px;
+    }
+
+    .categories-nav-block li {
+        padding: 12px 0;
+    }
+
+    .categories-nav-block a.active {
+        pointer-events: none;
+    }
+
+    .categories-nav-block a:hover,
+    .categories-nav-block a.active {
+        color: #46A358;
+        font-weight: 700;
+    }
+
+    .categories-nav-block a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .categories-nav-block a {
+    }
+.ad-banner {
+    display: block;
+    width: 310px;
+    height: auto;
+}
+
+
+.catalog-right-block {
+    float: right;
+    width: calc(100% - 310px - 50px);
+}
+
+.catalog-header {
+    overflow: hidden;
+}
+
+    .catalog-header ul {
+        list-style-type: none;
+    }
+
+    .catalog-header li {
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: 15px;
+        margin-right: 40px;
+    }
+
+    .catalog-header a {
+        display: block;
+        height: 23px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .catalog-header a.active {
+        pointer-events: none;
+    }
+    
+    .catalog-header a.active,
+    .catalog-header a:hover {
+        font-weight: 700;
+        color: #46A358;
+        border-bottom: 2px solid #46A358;
+        cursor: pointer;
+    }
+
+    .catalog-header nav {
+        float: left;
+    }
+
+    .catalog-header form {
+        float: right;
+    }
+
+.sort-panel {
+    font-size: 15px;
+    margin-right: 2px;
+}
+
+.sort-panel::after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border: 2px solid #3D3D3D;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
+    
+    .sort-panel label {
+        margin-right: 8px;
+    }
+
+    .sort-panel select {
+        border: none;
+        appearance: none;
+    }
+
+.catalog {
+    margin-top: 31px;
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 258px;
+    height: 300px;
+    background-color: #FBFBFB;
+}
+
+    .product-image-wrapper img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .product-card h3 {
+        margin-top: 12px;
+        font-weight: 400;
+    }
+    
+    .product-card span {
+        color: #46A358;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
+    .product-card span::before {
+        content: "$";
+    }
+
+.paginator{
+    clear: both;
+    float: right;
+    margin-top: 90px;
+}
+
+    .paginator ul {
+        list-style-type: none;
+
+    }
+
+    .paginator li {
+        display: inline-block;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px;
+        width: 35px;
+        height: 35px;
+        margin-left: 10px;
+        font-weight: 300;
+        font-size: 18px;
+        overflow: hidden;
+    }
+    
+    .paginator a:hover,
+    .paginator a.active {
+        background-color: #46A358;
+        font-weight: 700;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .paginator a.active {
+        pointer-events: none;
+    }
+
+    .paginator a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        color: black;
+        text-decoration: none;
+    }
