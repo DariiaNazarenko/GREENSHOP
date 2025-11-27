@@ -40,7 +40,7 @@
 }
 
 body {
-    font-family: "Cera Pro";
+    font-family: "Cera Pro", sans-serif;
     color: #3D3D3D;
     line-height: 1;
     font-size: 16px;
@@ -69,6 +69,7 @@ main {
 
 .button > * {
     vertical-align: middle;
+    text-transform: capitalize;
 }
 
 h1 {
@@ -80,6 +81,34 @@ h1 {
 h2 {
     font-weight: 700;
     font-size: 18px;
+}
+
+h3 {
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 0;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Login/register styles */
@@ -334,7 +363,6 @@ header {
 
     .categories-nav-block ul {
         overflow: hidden;
-        list-style-type: none;
         margin-left: 12px;
         margin-top: 7px;
         font-size: 15px;
@@ -360,7 +388,9 @@ header {
     }
 
     .categories-nav-block a {
+    
     }
+
 .ad-banner {
     display: block;
     width: 310px;
@@ -376,10 +406,6 @@ header {
 .catalog-header {
     overflow: hidden;
 }
-
-    .catalog-header ul {
-        list-style-type: none;
-    }
 
     .catalog-header li {
         display: inline-block;
@@ -444,7 +470,24 @@ header {
 
 .catalog {
     margin-top: 31px;
+    display: flex;
+    column-gap: 33px;
+    row-gap: 70px;
+    flex-wrap: wrap;
 }
+    
+    .product-card span {
+        color: #46A358;
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 6px;
+        display: block;
+    }
+    
+    .product-card span::before {
+        content: "$";
+    }
+
 
 .product-image-wrapper {
     position: relative;
@@ -460,31 +503,11 @@ header {
         transform: translate(-50%, -50%);
     }
 
-    .product-card h3 {
-        margin-top: 12px;
-        font-weight: 400;
-    }
-    
-    .product-card span {
-        color: #46A358;
-        font-weight: 700;
-        font-size: 18px;
-    }
-    
-    .product-card span::before {
-        content: "$";
-    }
-
 .paginator{
     clear: both;
     float: right;
     margin-top: 90px;
 }
-
-    .paginator ul {
-        list-style-type: none;
-
-    }
 
     .paginator li {
         display: inline-block;
@@ -518,4 +541,141 @@ header {
         width: 100%;
         color: black;
         text-decoration: none;
+    }
+
+
+/* posts-section styles */
+
+.posts-section {
+    margin-top: 94px;
+}
+
+.promo-container {
+    display: flex;
+    column-gap: 28px;
+    padding-top: 52px;
+}
+
+.promo-card {
+    position: relative;
+    background-color: #FBFBFB;
+    height: 250px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+    .promo-card > img {
+        position: absolute;
+        width: 287px;
+        bottom: 10px;
+        left: 0;
+    }
+
+.promo-info {
+    height: 100%;
+    width: 322px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 30px;
+}
+
+.promo-title {
+    text-transform: uppercase;
+}
+
+.promo-description {
+    margin-top: 9px;
+    text-align: end;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.promo-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 140px;
+    height: 40px;
+    column-gap: 6px;
+}
+
+.blog-container {
+    margin-top: 138px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-title {
+    text-transform: capitalize;
+}
+
+.blog-description {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.blog-posts {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.blog-post {
+    width: 268px;
+    height: 362px;
+    background-color: #FBFBFB;
+}
+
+    .blog-post img {
+
+    }
+
+.blog-post-info {
+    padding: 9px 15px 12px 15px;
+}
+
+.blog-post-meta {
+     color: #46A358;
+     font-size: 14px;
+     font-weight: 500;
+}
+
+.blog-post-title {
+    color: #3D3D3D;
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 4px;
+    text-transform: capitalize;
+}
+
+.blog-post-description {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #727272;
+}
+
+.blog-post-more {
+    margin-top: 9px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+    .blog-post-more img {
+        margin-left: 6px;
+        margin-top: 3px;
     }
