@@ -80,13 +80,12 @@ h1 {
 
 h2 {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 h3 {
-    margin-top: 12px;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 h4 {
@@ -99,12 +98,13 @@ h4 {
 
 h5 {
     font-weight: 700;
-    font-size: 30px;
+    font-size: 18px;
 }
 
 h6 {
-    font-weight: 700;
-    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 ul {
@@ -401,6 +401,7 @@ header {
 .catalog-right-block {
     float: right;
     width: calc(100% - 310px - 50px);
+    max-height: 1244px;
 }
 
 .catalog-header {
@@ -472,9 +473,12 @@ header {
     margin-top: 31px;
     display: flex;
     column-gap: 33px;
-    row-gap: 70px;
+    /* row-gap: 70px; */
     flex-wrap: wrap;
 }
+    .product-card {
+        margin-bottom: 70px;
+    }
     
     .product-card span {
         color: #46A358;
@@ -559,7 +563,7 @@ header {
 .promo-card {
     position: relative;
     background-color: #FBFBFB;
-    height: 250px;
+    min-height: 250px;
     flex-grow: 1;
     display: flex;
     justify-content: end;
@@ -580,6 +584,8 @@ header {
     justify-content: center;
     align-items: end;
     padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .promo-title {
@@ -624,7 +630,7 @@ header {
 .blog-posts {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    column-gap: 43px;
     margin-top: 35px;
 }
 
@@ -678,4 +684,23 @@ header {
     .blog-post-more img {
         margin-left: 6px;
         margin-top: 3px;
+        width: 13px;
+        height: 12px;
+        display: inline-block;
     }
+
+.blog-arrow-green {
+    display: none !important;
+}
+
+.blog-post-more:hover .blog-arrow-green {
+    display: inline-block !important;
+}
+
+.blog-post-more:hover .blog-arrow-black {
+    display: none !important;
+}
+
+.blog-post-more:hover {
+    color: #46A358;
+}
