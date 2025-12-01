@@ -72,6 +72,11 @@ main {
     text-transform: capitalize;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 h1 {
     font-weight: 900;
     font-size: 70px;
@@ -235,7 +240,11 @@ header {
         height: 100%;
     }
 
-        header nav ul {
+        header nav li {
+            position: relative;
+        }
+
+        header nav>ul {
             display: block;
             margin: 0 auto;
             width: max-content;
@@ -243,33 +252,100 @@ header {
             margin-top: 7px;
         }
 
-            header nav ul li {
-                display: inline-block;
-                margin-right: 50px;
-                height: 100%;
-            }
-
-                
-                header nav ul li a.active {
-                    pointer-events: none;
-                }
-
-                header nav ul li a:hover,
-                header nav ul li a.active {
-                    border-bottom: solid 3px #46A358;
-                    font-weight: 700;
-                }
-
-                header nav ul li a {
-                    display: block;
-                    height: 100%;
-                    text-decoration: none;
-                    color: black;
-                }
-        
-        header > .login-link > * {
-            vertical-align: middle;
+        header nav>ul>li {
+            display: inline-block;
+            margin-right: 50px;
+            height: 100%;
         }
+ 
+        header nav>ul>li>a.active {
+            pointer-events: none;
+        }
+
+        header nav>ul>li>a:hover,
+        header nav>ul>li>a.active {
+            border-bottom: solid 3px #46A358;
+            font-weight: 700;
+        }
+
+        header nav>ul>li>a {
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: black;
+        }
+
+        header nav li:has(.sub-menu):hover .sub-menu {
+            display: block;
+        }
+
+        .sub-menu li:has(.sub-menu-second-level):hover .sub-menu-second-level {
+            display: block;
+        }
+
+.sub-menu,
+.sub-menu-second-level {
+    position: absolute;
+    z-index: 101;
+    display: none;
+}
+
+.sub-menu {
+    top: 100%;
+    left: 0;
+    padding-top: 12px;
+}
+
+.sub-menu-second-level {
+    top: 0;
+    left: 100%;
+    padding-left: 2px;
+}
+    .sub-menu li {
+        background-color: #EDF6EE;
+        width: 188px;
+        height: 35px;
+    }
+
+    .sub-menu a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding-left: 14px;
+        padding-top: 8px;
+        font-size: 16px;
+    }
+
+    .sub-menu li:hover>a {
+        background-color: #1A712A;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    
+    .sub-menu li:has(ul)>a::after {
+        content: '';
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        border: 1px solid black;
+        width: 7px;
+        height: 7px;
+        display: inline-block;
+        border-bottom: none;
+        border-left: none;
+        transition: transform 0.3s;
+    }
+
+    .sub-menu li:has(ul):hover>a::after {
+        border-color: white;
+        transform: translate(50%, -50%) rotate(-135deg);
+    }
+
+.login-link > * {
+    vertical-align: middle;
+}
 
 /* Main styles */
 
