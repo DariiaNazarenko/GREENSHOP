@@ -961,13 +961,11 @@ footer {
     }
 
 .footer-contacts {
-    display: block;
-    height: 88px;
     background: linear-gradient(90deg, #EDF6EF, #52C368);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 23px;
+    padding: 22px 23px;
 }
     .footer-contacts .logo {
         width: 150px;
@@ -984,6 +982,12 @@ footer {
         margin-left: 9px;
         line-height: 22px;
         font-size: 14px;
+    }
+    
+
+    .footer-contact a:hover {
+        text-decoration: underline;
+        cursor: pointer;
     }
 
 .footer-links {
