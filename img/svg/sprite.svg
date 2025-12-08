@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-location" viewBox="0 0 20 20">
+        <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M12.0918 8.92542C12.0918 7.77436 11.1591 6.84166 10.0081 6.84166C8.85787 6.84166 7.92517 7.77436 7.92517 8.92542C7.92517 10.0756 8.85787 11.0083 10.0081 11.0083C11.1591 11.0083 12.0918 10.0756 12.0918 8.92542Z" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M9.99959 17.5C7.58457 17.5 3.75 13.2989 3.75 8.8322C3.75 5.33539 6.54758 2.5 9.99959 2.5C13.4516 2.5 16.25 5.33539 16.25 8.8322C16.25 13.2989 12.4154 17.5 9.99959 17.5Z" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-message" viewBox="0 0 20 20">
+        <path fill="none" d="M14.6208 7.51582C14.6208 7.51582 11.9457 10.7263 9.98919 10.7263C8.03347 10.7263 5.32837 7.51582 5.32837 7.51582" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M2.04341 9.97397C2.04341 4.27556 4.02754 2.37665 9.97992 2.37665C15.9323 2.37665 17.9164 4.27556 17.9164 9.97397C17.9164 15.6716 15.9323 17.5713 9.97992 17.5713C4.02754 17.5713 2.04341 15.6716 2.04341 9.97397Z" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-calling" viewBox="0 0 20 20">
+        <path fill="none" d="M11.9604 2.29176C15.0446 2.63426 17.4812 5.0676 17.8279 8.15176" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill="none" d="M11.9604 5.24426C13.4362 5.53093 14.5896 6.6851 14.8771 8.16093" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill="none" fill-rule="evenodd" clip-rule="evenodd" d="M6.41709 13.5825C0.668773 7.83352 1.48617 5.20096 2.09214 4.35263C2.16999 4.21552 4.08875 1.34323 6.14551 3.02839C11.2507 7.23288 4.78761 6.63843 9.07452 10.9261C13.3623 15.2128 12.767 8.74996 16.9716 13.8541C18.6568 15.9117 15.7844 17.8303 15.6482 17.9073C14.7998 18.5141 12.1663 19.3315 6.41709 13.5825Z" stroke="#46A358" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>

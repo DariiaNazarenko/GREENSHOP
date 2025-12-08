@@ -47,7 +47,8 @@ body {
 }
 
 header,
-main {
+main,
+footer {
     display: block;
     max-width: 1200px;
     margin: 0 auto;
@@ -107,9 +108,8 @@ h5 {
 }
 
 h6 {
-    margin-top: 12px;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 17px;
 }
 
 ul {
@@ -567,6 +567,12 @@ header {
     .product-card:hover .product-image-wrapper {
         border-top: 1px solid #46A358;
     }
+
+    .product-card>p {
+        margin-top: 12px;
+        font-weight: 400;
+        font-size: 16px;
+    }
     
     .product-card>span {
         color: #46A358;
@@ -843,3 +849,195 @@ header {
 .blog-post-more:hover {
     color: #46A358;
 }
+
+/* Footer styles */
+footer {
+    margin-top: 100px;
+}
+
+.footer-top {
+    padding: 24px 25px;
+    display: flex;
+    background-color: #FBFBFB;
+}
+
+.footer-services {
+    display: flex;
+    flex-grow: 1;
+    column-gap: 61px;
+}
+
+.footer-service {
+    position: relative;
+    background-repeat: no-repeat;
+    padding-top: 108px;
+    width: 204px;
+}
+
+    .footer-service:nth-child(1) {
+        background-size: 77px 95px;
+        background-image: url('../img/png/footer-picture-1.png');
+    }
+
+    .footer-service:nth-child(2) {
+        background-size: 83px 93px;
+        background-image: url('../img/png/footer-picture-2.png');
+    }
+
+    .footer-service:nth-child(3) {
+        background-size: 90px 92px;
+        background-image: url('../img/png/footer-picture-3.png');
+    }
+
+    .footer-service:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 187px;
+        background: #46A3581A;
+        position: absolute;
+        left: calc(100% + 30px);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .footer-service p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 9px;
+        color: #727272;
+    }
+
+.footer-newsletter {
+    width: 354px;
+}
+
+    .footer-newsletter h5 {
+        margin-top: 13px;
+    }
+
+    .footer-newsletter form {
+        display: flex;
+        overflow: hidden;
+        border-radius: 6px;
+        margin-top: 25px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .footer-newsletter input {
+        height: 40px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 269px;
+        outline: none;
+        padding-left: 11px;
+    }
+
+    .footer-newsletter input[type="email"]::placeholder {
+        color: #ACACAC;
+    }
+ 
+    .footer-newsletter input[type="submit"] {
+        width: 85px;
+        font-weight: 700;
+        font-size: 18px;
+        color: white;
+        background-color: #46A358;
+    }
+
+    .footer-newsletter input[type="submit"]:hover {
+        background-color: #3b8e4d;
+        cursor: pointer;
+    }
+
+    .footer-newsletter p {
+        margin-top: 18px;
+        margin-bottom: 1px;
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+.footer-contacts {
+    background: linear-gradient(90deg, #EDF6EF, #52C368);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 23px;
+}
+    .footer-contacts .logo {
+        width: 150px;
+    }
+
+.footer-contact { 
+    display: flex;
+    height: max-content;
+    align-items: center;
+}
+
+    .footer-contact a,
+    .footer-contact p {
+        margin-left: 9px;
+        line-height: 22px;
+        font-size: 14px;
+    }
+    
+
+    .footer-contact a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.footer-links {
+    padding-top: 33px;
+    padding-bottom: 29px;
+    padding-left: 25px;
+    background-color: #FBFBFB;
+    display: flex;
+    border-bottom: 1px solid #46A35833;
+}
+
+.footer-menu-help {
+    margin-left: 164px;
+}
+
+.footer-menu-categories {
+    margin-left: 129px;
+}
+
+    .footer-menu ul {
+        margin-top: 8px;
+    }
+
+    .footer-menu li {
+        height: 30px;
+    }
+
+    .footer-menu a {
+        display: block;
+        font-size: 14px;
+        color: #3D3D3D;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .footer-menu a:hover {
+        color: #46A358;
+        cursor: pointer;
+    }
+
+    .footer-copyright span {
+        display: block;
+        margin: 0 auto;
+        font-size: 14px;
+        color: #3D3D3D;
+        text-transform: capitalize;
+        height: 30px;
+        width: max-content;
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+    }
